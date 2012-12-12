@@ -10,6 +10,7 @@ class HelloController extends JControllerBase
     $model = new HelloModelHello;
     $view = new HelloViewHelloHtml($model);
 
+    /* for some reason, it doesn't use this layout */
     $view->setLayout('hello');
 
     $output = $view->render();
