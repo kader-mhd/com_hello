@@ -12,12 +12,14 @@ class HelloViewHelloHtml extends JViewHtml
     return $paths;
   }
   
-	public function render()
-	{
-	  $this->data = $this->model->getMsg();
+  public function render()
+  {
+    $this->data = $this->model->getMsg();
+
+    /* I'm not able to use 'hello' layout,
+    so echo data here */
+    echo "<h1>" . $this->data . "</h1>";
 	  
-	  echo "<h1>" . $this->data . "</h1>";
-	  
-	  return parent::render();
-	}
+    return parent::render();
+  }
 }
